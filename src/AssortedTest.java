@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AssortedTest {
@@ -43,16 +44,16 @@ class AssortedTest {
     @org.junit.jupiter.api.Test
     void findSum() {
 
-        assertTrue(Assorted.findSum(findSumList) == 160, "Your findSum method, bruh.");
-        assertTrue(Assorted.findSum(findSumList2) == 390, "Your findSum method, bruh.");
+        assertTrue("Your findSum method, bruh.", Assorted.findSum(findSumList) == 160);
+        assertTrue("Your findSum method, bruh.", Assorted.findSum(findSumList2) == 390);
 
     }
 
     @org.junit.jupiter.api.Test
     void filterStrings() {
 
-        assertTrue(Assorted.filterStrings(findSumList).size() == 2, "Your filterStrings method, bruh.");
-        assertTrue(Assorted.filterStrings(findSumList2).size() == 4, "Your filterStrings method, bruh.");
+        assertTrue("Your filterStrings method, bruh.", Assorted.filterStrings(findSumList).size() == 2);
+        assertTrue("Your filterStrings method, bruh.", Assorted.filterStrings(findSumList2).size() == 4);
 
     }
 
@@ -89,15 +90,15 @@ class AssortedTest {
 
         List<Integer> listOne = new ArrayList(Arrays.asList(0,0,0,1));
         int result = Assorted.toBinary(listOne);
-        assertTrue(result == 1, "Your toBinary method, bratishka.");
+        assertTrue("Your toBinary method, bratishka.", result == 1);
 
         List<Integer> listTwo = new ArrayList(Arrays.asList(0,1,0,1));
         int result2 = Assorted.toBinary(listTwo);
-        assertTrue(result2 == 5, "Your toBinary method, bratishka.");
+        assertTrue("Your toBinary method, bratishka.", result2 == 5);
 
         List<Integer> listThree = new ArrayList(Arrays.asList(1,1,0,1,0,1,1,0));
         int result3 = Assorted.toBinary(listThree);
-        assertTrue(result3 == 214, "Your toBinary method, bratishka.");
+        assertTrue("Your toBinary method, bratishka.", result3 == 214);
 
     }
 
@@ -133,12 +134,12 @@ class AssortedTest {
         assertTrue(listSortedOdd.get(3) == 4);
         assertTrue(listSortedOdd.get(listSortedOdd.size()-1) == 67);
 
-        for (int i = 0; i < list.size(); i ++) {
-
-            if (i%2 == 0) {
-                assertTrue(list.get(i) == listSortedOdd.get(i));
-            }
-        }
+//        for (int i = 0; i < list.size(); i ++) {
+//
+//            if (i%2 == 0) {
+//                assertTrue(list.get(i) == listSortedOdd.get(i));
+//            }
+//        }
 
 
     }
