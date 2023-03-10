@@ -195,38 +195,69 @@ public class Assorted {
 
         System.out.println(list);
 
-        ArrayList<Integer> sorted = new ArrayList<Integer>();
+//        ArrayList<Integer> sorted = new ArrayList<Integer>();
+//
+//        int currSmallest = 0;
+//        int threeCount = 0;
+//
+//        for(int currInt : list)
+//        {
+//            if(currInt % 2 == 1)
+//            {
+//                currSmallest = currInt;
+//                int smallestIndex = 0;
+//
+//                if(threeCount == 1)
+//                {
+//                    sorted.remove(Integer. valueOf(3));
+//                }
+//
+//                for(int currIndex = 0; currIndex < list.size(); currIndex++)
+//                {
+//                    if(list.get(currIndex) % 2 == 1 && list.get(currIndex) <= currSmallest && !sorted.contains(list.get(currIndex)))
+//                    {
+//                        currSmallest = list.get(currIndex);
+//                        smallestIndex = currIndex;
+//                    }
+//
+//                }
+//                sorted.add(list.get(currSmallest));
+//
+//                if(list.get(smallestIndex) == 3)
+//                {
+//                    threeCount = threeCount + 1;
+//                }
+//
+//                System.out.println(list.get(currSmallest));
+//                Collections.swap(list, list.indexOf(currInt), smallestIndex);
+//                System.out.println(list);
+//            }
+//        }
 
-        int currSmallest = 0;
-        int smallestIndex = 0;
+        ArrayList<Integer> oddNumbers = new ArrayList<>();
+        ArrayList<Integer> oddIndexes = new ArrayList<>();
 
-        for(int currInt : list)
+        for(int j = 0; j< list.size(); j++)
         {
-            if(currInt % 2 == 1)
+            if(list.get(j) % 2 == 1)
             {
-                currSmallest = currInt;
-
-                for(int currInt2 : list)
-                {
-                    if(currInt2 % 2 == 1 && currInt2 < currSmallest && !sorted.contains(currInt2))
-                    {
-                        currSmallest = currInt2;
-                        smallestIndex = list.indexOf(currInt2);
-                    }
-
-                }
-                sorted.add(currSmallest);
-
-                Collections.swap(list, list.indexOf(currInt), smallestIndex);
-                currSmallest = 0;
-                smallestIndex = 0;
+                oddNumbers.add(list.get(j));
+                oddIndexes.add(j);
             }
         }
-        ArrayList<Integer> finalList = new ArrayList<Integer>(Arrays.asList(12, 1, 3, 4, 3, 9, 22, 11, 21, 22, 8, 67));
 
-        System.out.println(finalList);
+        Collections.sort(oddNumbers);
+        System.out.println(oddNumbers);
+        System.out.println(oddIndexes);
 
-        return finalList;
+        for(int i=0; i< oddIndexes.size();i++)
+        {
+            list.set(oddIndexes.get(i), oddNumbers.get(i));
+        }
+
+        System.out.println(list);
+
+        return list;
     }
 
     /**
