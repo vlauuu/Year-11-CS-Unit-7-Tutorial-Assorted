@@ -195,45 +195,6 @@ public class Assorted {
 
         System.out.println(list);
 
-//        ArrayList<Integer> sorted = new ArrayList<Integer>();
-//
-//        int currSmallest = 0;
-//        int threeCount = 0;
-//
-//        for(int currInt : list)
-//        {
-//            if(currInt % 2 == 1)
-//            {
-//                currSmallest = currInt;
-//                int smallestIndex = 0;
-//
-//                if(threeCount == 1)
-//                {
-//                    sorted.remove(Integer. valueOf(3));
-//                }
-//
-//                for(int currIndex = 0; currIndex < list.size(); currIndex++)
-//                {
-//                    if(list.get(currIndex) % 2 == 1 && list.get(currIndex) <= currSmallest && !sorted.contains(list.get(currIndex)))
-//                    {
-//                        currSmallest = list.get(currIndex);
-//                        smallestIndex = currIndex;
-//                    }
-//
-//                }
-//                sorted.add(list.get(currSmallest));
-//
-//                if(list.get(smallestIndex) == 3)
-//                {
-//                    threeCount = threeCount + 1;
-//                }
-//
-//                System.out.println(list.get(currSmallest));
-//                Collections.swap(list, list.indexOf(currInt), smallestIndex);
-//                System.out.println(list);
-//            }
-//        }
-
         ArrayList<Integer> oddNumbers = new ArrayList<>();
         ArrayList<Integer> oddIndexes = new ArrayList<>();
 
